@@ -1,0 +1,12 @@
+#recipes img, #recipe img{
+    width: 100%;
+}
+
+#recipes .col-md-3 .well{
+    height: 390px;
+
+}
+
+#recipes .col-md-3 img{
+    height: 240px;
+}

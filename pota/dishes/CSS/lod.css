@@ -1,0 +1,81 @@
+body {
+  font-family: "Raleway"
+}
+
+ul {
+    list-style: none;
+    text-align: center;
+    display: flex;
+    overflow: visible;
+    display: block;
+    background-color: #7e4a35;
+}
+
+img {
+  float: left;
+  display: inline-block;
+  padding: 40px;
+  width: 35%;
+  height: 35%;
+}
+
+.DISH {
+  color: black;
+  font-family: sans-serif;
+  font-size: 50px;
+  text-align: center;
+  padding: 100px;
+  font-weight: bold;
+}
+
+p {
+  color: #feb236;
+  text-align: center;
+  display: inline-block;
+}
+
+.BUTTON {
+  background-color: #feb236;
+  color: #3e4444;
+}
+
+.FOOTER {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.TEAM {
+  color: white;
+}
+
+.categories {
+  overflow: visible;
+  height: 100px;
+  width: 100%;
+  display: inline-block;
+}
+
+.categories ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.categories ul li a {
+  display: block;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 40px;
+  background-color: white;
+  transform: translateX(130px);
+}
+
+.categories ul li a:hover {
+  background: #ffcc5c;
+}
+
+.KEY {
+  text-align: center;
+}

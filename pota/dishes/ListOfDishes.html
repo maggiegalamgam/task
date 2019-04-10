@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="icon" href="../images/utensils.ico">
+  <title> List Of Dishes </title>
+
+  <meta http-equiv = "Content-Type" content = "text/html; charset=UTF-8">
+  <meta NAME = "viewport" content = "width=device-width, initial-scale=1">
+  
+  <link rel = "stylesheet" href = "https://www.w3schools.com/w3css/4/w3.css">
+  <link href = "https://fonts.googleapis.com/css?family=Raleway" rel = "stylesheet" type = "text/css">
+  <link href = "https://www.1001freefonts.com/calligraphy-fonts.php">
+  <link rel = "stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+
+  <link rel = "stylesheet" type = "text/css" href = "CSS/lod.css">
+
+  <script type = "text/javascript" src = "lod.js"></script>
+</head>
+
+<body ng-app = "app" ng-controller = "ctrl">
+  <section class = "choices">
+    <div class = "categories">
+      <ul>
+        <li ng-repeat = "menu in menus">
+          <a ng-repeat = "(key,val) in menu" href = "" ng-click = "categoryList(key)">
+            {{key}}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  
+  <section class = "category" ng-repeat = "menu in menus">
+    <div ng-repeat = "(key, items) in menu">
+      <ul>
+        <li ng-repeat = "item in items" ng-show = "category == key">
+          <div>
+            <br>
+            <img src = "{{item.strCategoryThumb}}">
+            
+            <h3 class = "DISH"> {{item.strCategory}} </h3>
+            <p> {{item.strCategoryDescription}} <br> <br> </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class = "FOOTER w3-padding-64">
+    <a href = "#top" class = "w3-button" style = "background-color: #feb236; color: black ; text-decoration: none ;">
+      <i class = "fa fa-arrow-up w3-margin-right"></i> TO THE TOP 
+    </a>
+
+    <br> <br> <br>
+    <p class = "TEAM"> Team Makder | All Rights Reserved ©️ 2019 </p>
+  </footer>
+</body>
+
+</html>

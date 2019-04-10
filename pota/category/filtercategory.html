@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cuisna</title>
+		<link rel="icon" href="../images/utensils.ico">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+      
+    </head>
+	<script src="category.js"></script>
+    <body>
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Cuisina</a>
+          <span class="navbar-toggler-icon"></span>
+      </nav>
+        
+        <div class="contents">
+          <body ng-app="app" ng-controller="ctrl">
+            <div class= "Caption">
+              <h1>Category</h1>
+            </div>
+              <section class="choices">
+                <div class="categories">
+                  <button ng-repeat="menu in menus">
+                      <a ng-repeat="(key,val) in menu" href="" ng-click="categoryList(key)">{{key}}</a> 
+                    </button>
+                </div>
+              </section>
+              <section class="category" ng-repeat="menu in menus">
+                <div ng-repeat="(key, items) in menu">
+                  <ul>
+                    <br>
+                    <li ng-repeat="item in items" ng-show="category == key">
+                      <div id="whole">
+                      <div id="Image">
+                        <img src="{{item.strMealThumb}}">
+                       </div>
+                      <div id="MealName">
+                        <h3>{{item.strMeal}}</h3>
+                      </div>
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+              
+            </body>
+        </div>
+    </body>
+</html>
